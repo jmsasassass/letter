@@ -1,0 +1,1859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For My Wife ♡</title>
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    color: #493a38;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(255, 193, 211, 0.55),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 90%,
+            rgba(244, 190, 207, 0.45),
+            transparent 30%
+        ),
+        #f8f0e9;
+
+    overflow-x: hidden;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   BACKGROUND LIGHT
+========================================================= */
+
+.glow {
+    position: fixed;
+
+    width: 450px;
+    height: 450px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 190, 210, 0.13);
+
+    filter: blur(90px);
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+.glow.one {
+    top: -220px;
+    left: -220px;
+}
+
+.glow.two {
+    right: -220px;
+    bottom: -220px;
+}
+
+
+/* =========================================================
+   ONLINE FLOWER DECORATIONS
+========================================================= */
+
+.corner-flower {
+    position: fixed;
+
+    width: 190px;
+
+    pointer-events: none;
+
+    z-index: 1;
+
+    opacity: 0.78;
+
+    filter:
+        drop-shadow(
+            0 8px 15px rgba(100, 50, 65, 0.12)
+        );
+}
+
+.flower-top-left {
+    top: -35px;
+    left: -35px;
+
+    transform: rotate(-10deg);
+}
+
+.flower-top-right {
+    top: -35px;
+    right: -40px;
+
+    transform:
+        scaleX(-1)
+        rotate(-8deg);
+}
+
+.flower-bottom-left {
+    bottom: -45px;
+    left: -40px;
+
+    transform: rotate(165deg);
+}
+
+.flower-bottom-right {
+    bottom: -45px;
+    right: -40px;
+
+    transform:
+        scaleX(-1)
+        rotate(165deg);
+}
+
+
+/* =========================================================
+   CSS VINES
+========================================================= */
+
+.vine {
+    position: fixed;
+
+    top: 0;
+
+    width: 130px;
+    height: 100vh;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    opacity: 0.20;
+}
+
+.vine::before,
+.vine::after {
+    content: "";
+
+    position: absolute;
+
+    width: 3px;
+    height: 90%;
+
+    top: 5%;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            #78916e,
+            #78916e,
+            transparent
+        );
+
+    border-radius: 50%;
+}
+
+.vine::before {
+    left: 40px;
+
+    transform: rotate(7deg);
+}
+
+.vine::after {
+    left: 65px;
+
+    transform: rotate(-9deg);
+}
+
+.vine-left {
+    left: 0;
+}
+
+.vine-right {
+    right: 0;
+
+    transform: scaleX(-1);
+}
+
+
+/* =========================================================
+   SMALL LEAVES
+========================================================= */
+
+.vine-left::before,
+.vine-left::after,
+.vine-right::before,
+.vine-right::after {
+    box-shadow:
+        15px 70px 0 -1px #819775,
+        -13px 145px 0 -1px #819775,
+        18px 225px 0 -1px #819775,
+        -15px 310px 0 -1px #819775,
+        18px 400px 0 -1px #819775,
+        -14px 500px 0 -1px #819775,
+        15px 610px 0 -1px #819775,
+        -15px 730px 0 -1px #819775,
+        15px 850px 0 -1px #819775;
+}
+
+
+/* =========================================================
+   GENERAL PAGE
+========================================================= */
+
+.page {
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 70px 25px;
+
+    z-index: 2;
+}
+
+.content {
+    width: 100%;
+
+    max-width: 650px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   PASSWORD PAGE
+========================================================= */
+
+#passwordPage {
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.small-title {
+    margin-bottom: 15px;
+
+    color: #a75e77;
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+}
+
+h1 {
+    margin: 0 0 15px;
+
+    font-size: clamp(
+        42px,
+        9vw,
+        68px
+    );
+
+    font-weight: normal;
+
+    color: #463533;
+}
+
+.intro {
+    max-width: 460px;
+
+    margin:
+        0 auto
+        35px;
+
+    color: #806e69;
+
+    line-height: 1.8;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   PASSWORD CARD
+========================================================= */
+
+.lock-card {
+    position: relative;
+
+    padding: 42px 36px;
+
+    background:
+        rgba(
+            255,
+            253,
+            249,
+            0.92
+        );
+
+    border:
+        1px solid
+        rgba(
+            210,
+            140,
+            160,
+            0.25
+        );
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 25px 70px
+        rgba(
+            90,
+            50,
+            60,
+            0.12
+        );
+}
+
+.lock-card::before {
+    content: "♡";
+
+    position: absolute;
+
+    top: 13px;
+    right: 18px;
+
+    color: #efb5c7;
+
+    font-size: 25px;
+}
+
+.lock {
+    margin-bottom: 12px;
+
+    font-size: 40px;
+}
+
+.lock-card h2 {
+    margin: 0 0 8px;
+
+    font-size: 25px;
+
+    font-weight: normal;
+}
+
+.hint {
+    margin-bottom: 22px;
+
+    color: #927d78;
+
+    font-size: 14px;
+}
+
+.password-input {
+    width: 100%;
+
+    padding: 16px;
+
+    border:
+        1px solid #dec4ca;
+
+    border-radius: 7px;
+
+    background: #fffdfb;
+
+    outline: none;
+
+    text-align: center;
+
+    font-size: 17px;
+
+    letter-spacing: 3px;
+
+    transition: 0.25s;
+}
+
+.password-input:focus {
+    border-color: #d98ca3;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(
+            217,
+            140,
+            163,
+            0.12
+        );
+}
+
+.unlock-button {
+    width: 100%;
+
+    margin-top: 12px;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #b96d86;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.unlock-button:hover {
+    background: #a85c75;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(
+            168,
+            92,
+            117,
+            0.22
+        );
+}
+
+.error {
+    display: none;
+
+    margin-top: 15px;
+
+    color: #ad5269;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   LETTER PAGE
+========================================================= */
+
+#letterPage {
+    display: none;
+
+    opacity: 0;
+}
+
+.letter-scene {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 1150px;
+
+    min-height: 1050px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   LETTER PAPER
+========================================================= */
+
+.letter-paper {
+    position: relative;
+
+    width: min(
+        660px,
+        88vw
+    );
+
+    padding:
+        60px 55px;
+
+    background: #fffdf9;
+
+    border:
+        1px solid #eadbd4;
+
+    box-shadow:
+        0 25px 70px
+        rgba(
+            70,
+            40,
+            45,
+            0.17
+        );
+
+    z-index: 10;
+}
+
+
+/* Paper lines */
+
+.letter-paper::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0,
+            transparent 31px,
+            rgba(
+                180,
+                150,
+                150,
+                0.07
+            ) 32px
+        );
+}
+
+
+/* Pink paper edge */
+
+.letter-paper::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 4px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #efb8c8,
+            #d889a1,
+            #efb8c8
+        );
+}
+
+
+/* =========================================================
+   LETTER CONTENT
+========================================================= */
+
+.letter-heading {
+    position: relative;
+
+    margin:
+        0 0 18px;
+
+    text-align: center;
+
+    font-size: 37px;
+
+    font-weight: normal;
+
+    color: #4b3937;
+
+    z-index: 2;
+}
+
+.heart-divider {
+    position: relative;
+
+    margin-bottom: 28px;
+
+    text-align: center;
+
+    color: #d98ca3;
+
+    letter-spacing: 8px;
+
+    z-index: 2;
+}
+
+.letter-text {
+    position: relative;
+
+    font-size: 17px;
+
+    line-height: 2;
+
+    white-space: pre-line;
+
+    z-index: 2;
+}
+
+.signature {
+    position: relative;
+
+    margin-top: 40px;
+
+    text-align: right;
+
+    font-style: italic;
+
+    font-size: 19px;
+
+    color: #a85c75;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   SCRAPBOOK PHOTOS
+========================================================= */
+
+.memory-photo {
+    position: absolute;
+
+    object-fit: cover;
+
+    background: white;
+
+    padding:
+        8px
+        8px
+        27px;
+
+    border:
+        1px solid
+        rgba(
+            100,
+            70,
+            70,
+            0.10
+        );
+
+    box-shadow:
+        0 10px 25px
+        rgba(
+            55,
+            35,
+            40,
+            0.19
+        );
+
+    cursor: pointer;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+
+    z-index: 4;
+}
+
+.memory-photo:hover {
+    transform:
+        rotate(0deg)
+        scale(1.09) !important;
+
+    box-shadow:
+        0 20px 40px
+        rgba(
+            55,
+            35,
+            40,
+            0.30
+        );
+
+    z-index: 50;
+}
+
+
+/* =========================================================
+   PHOTO 1
+========================================================= */
+
+.photo1 {
+    width: 175px;
+    height: 195px;
+
+    left: 35px;
+    top: 35px;
+
+    transform: rotate(-8deg);
+}
+
+
+/* =========================================================
+   PHOTO 2
+========================================================= */
+
+.photo2 {
+    width: 185px;
+    height: 165px;
+
+    right: 30px;
+    top: 45px;
+
+    transform: rotate(7deg);
+}
+
+
+/* =========================================================
+   PHOTO 3
+========================================================= */
+
+.photo3 {
+    width: 145px;
+    height: 175px;
+
+    left: -15px;
+    top: 290px;
+
+    transform: rotate(-12deg);
+}
+
+
+/* =========================================================
+   PHOTO 4
+========================================================= */
+
+.photo4 {
+    width: 155px;
+    height: 185px;
+
+    right: -15px;
+    top: 275px;
+
+    transform: rotate(10deg);
+}
+
+
+/* =========================================================
+   PHOTO 5
+========================================================= */
+
+.photo5 {
+    width: 180px;
+    height: 150px;
+
+    left: 20px;
+    bottom: 105px;
+
+    transform: rotate(7deg);
+}
+
+
+/* =========================================================
+   PHOTO 6
+========================================================= */
+
+.photo6 {
+    width: 175px;
+    height: 185px;
+
+    right: 20px;
+    bottom: 85px;
+
+    transform: rotate(-8deg);
+}
+
+
+/* =========================================================
+   PHOTO 7
+========================================================= */
+
+.photo7 {
+    width: 115px;
+    height: 135px;
+
+    left: 205px;
+    top: 15px;
+
+    transform: rotate(11deg);
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   PHOTO 8
+========================================================= */
+
+.photo8 {
+    width: 125px;
+    height: 140px;
+
+    right: 205px;
+    top: 20px;
+
+    transform: rotate(-10deg);
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   PHOTO 9
+========================================================= */
+
+.photo9 {
+    width: 120px;
+    height: 140px;
+
+    left: 90px;
+    top: 480px;
+
+    transform: rotate(5deg);
+
+    z-index: 6;
+}
+
+
+/* =========================================================
+   PHOTO 10
+========================================================= */
+
+.photo10 {
+    width: 125px;
+    height: 140px;
+
+    right: 85px;
+    top: 490px;
+
+    transform: rotate(-6deg);
+
+    z-index: 6;
+}
+
+
+/* =========================================================
+   PHOTO 11
+========================================================= */
+
+.photo11 {
+    width: 125px;
+    height: 140px;
+
+    left: 200px;
+    bottom: 20px;
+
+    transform: rotate(-10deg);
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   PHOTO 12
+========================================================= */
+
+.photo12 {
+    width: 120px;
+    height: 140px;
+
+    right: 205px;
+    bottom: 25px;
+
+    transform: rotate(9deg);
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   PHOTO 13
+========================================================= */
+
+.photo13 {
+    width: 125px;
+    height: 145px;
+
+    left: 300px;
+    top: 95px;
+
+    transform: rotate(-5deg);
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   PHOTO 14
+========================================================= */
+
+.photo14 {
+    width: 130px;
+    height: 145px;
+
+    right: 300px;
+    bottom: 70px;
+
+    transform: rotate(5deg);
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   PHOTO 15
+========================================================= */
+
+.photo15 {
+    width: 105px;
+    height: 120px;
+
+    left: 35px;
+    bottom: 10px;
+
+    transform: rotate(-4deg);
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   SMALL SCRAPBOOK CAPTIONS
+========================================================= */
+
+.caption {
+    position: absolute;
+
+    font-family:
+        "Comic Sans MS",
+        cursive;
+
+    font-size: 13px;
+
+    color: #8c6570;
+
+    z-index: 15;
+
+    pointer-events: none;
+}
+
+.caption.one {
+    left: 55px;
+    top: 240px;
+
+    transform: rotate(-8deg);
+}
+
+.caption.two {
+    right: 55px;
+    bottom: 225px;
+
+    transform: rotate(7deg);
+}
+
+.caption.three {
+    left: 175px;
+    bottom: 150px;
+
+    transform: rotate(-4deg);
+}
+
+
+/* =========================================================
+   LITTLE HEARTS
+========================================================= */
+
+.floating-heart {
+    position: absolute;
+
+    color: #df9aae;
+
+    font-size: 18px;
+
+    opacity: 0.75;
+
+    z-index: 2;
+
+    animation:
+        floatHeart 4s
+        ease-in-out
+        infinite;
+}
+
+.heart1 {
+    left: 180px;
+    top: 210px;
+}
+
+.heart2 {
+    right: 170px;
+    top: 225px;
+
+    animation-delay: 1s;
+}
+
+.heart3 {
+    left: 240px;
+    bottom: 170px;
+
+    animation-delay: 2s;
+}
+
+@keyframes floatHeart {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-7px);
+    }
+}
+
+
+/* =========================================================
+   PASSWORD SHAKE
+========================================================= */
+
+.shake {
+    animation:
+        shake 0.35s;
+}
+
+@keyframes shake {
+
+    0% {
+        transform:
+            translateX(0);
+    }
+
+    25% {
+        transform:
+            translateX(-8px);
+    }
+
+    50% {
+        transform:
+            translateX(8px);
+    }
+
+    75% {
+        transform:
+            translateX(-8px);
+    }
+
+    100% {
+        transform:
+            translateX(0);
+    }
+}
+
+
+/* =========================================================
+   LETTER REVEAL
+========================================================= */
+
+.show-letter {
+    display: block !important;
+
+    animation:
+        reveal 1.4s forwards;
+}
+
+@keyframes reveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .corner-flower {
+        width: 120px;
+    }
+
+    .vine {
+        width: 70px;
+
+        opacity: 0.12;
+    }
+
+    .letter-scene {
+        min-height: 850px;
+
+        padding:
+            80px 0
+            100px;
+    }
+
+    .letter-paper {
+        width: 86vw;
+
+        padding:
+            45px 25px;
+    }
+
+    .memory-photo {
+        width: 90px !important;
+        height: 105px !important;
+
+        padding:
+            6px
+            6px
+            19px;
+    }
+
+    .photo1 {
+        left: -4px;
+        top: 20px;
+    }
+
+    .photo2 {
+        right: -4px;
+        top: 25px;
+    }
+
+    .photo3 {
+        left: -4px;
+        top: 230px;
+    }
+
+    .photo4 {
+        right: -4px;
+        top: 245px;
+    }
+
+    .photo5 {
+        left: -4px;
+        bottom: 110px;
+    }
+
+    .photo6 {
+        right: -4px;
+        bottom: 100px;
+    }
+
+    .photo7 {
+        left: 30px;
+        top: 90px;
+    }
+
+    .photo8 {
+        right: 30px;
+        top: 95px;
+    }
+
+    .photo9 {
+        left: 5px;
+        top: 390px;
+    }
+
+    .photo10 {
+        right: 5px;
+        top: 400px;
+    }
+
+    .photo11 {
+        left: 35px;
+        bottom: 15px;
+    }
+
+    .photo12 {
+        right: 35px;
+        bottom: 10px;
+    }
+
+    .photo13 {
+        left: 105px;
+        top: 65px;
+    }
+
+    .photo14 {
+        right: 105px;
+        bottom: 45px;
+    }
+
+    .photo15 {
+        left: 60px;
+        bottom: 5px;
+    }
+
+    .caption {
+        display: none;
+    }
+
+    .floating-heart {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   PHONE
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .corner-flower {
+        width: 90px;
+    }
+
+    .letter-paper {
+        width: 88vw;
+
+        padding:
+            40px 20px;
+    }
+
+    .memory-photo {
+        width: 68px !important;
+        height: 82px !important;
+
+        padding:
+            5px
+            5px
+            15px;
+    }
+
+    .photo13,
+    .photo14,
+    .photo15 {
+        display: none;
+    }
+
+    .letter-heading {
+        font-size: 29px;
+    }
+
+    .letter-text {
+        font-size: 15px;
+
+        line-height: 1.9;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     BACKGROUND
+========================================================= -->
+
+<div class="glow one"></div>
+
+<div class="glow two"></div>
+
+
+<!-- =========================================================
+     ONLINE FLOWERS
+========================================================= -->
+
+<img
+    class="corner-flower flower-top-left"
+    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Rose_flower.png"
+    alt=""
+>
+
+<img
+    class="corner-flower flower-top-right"
+    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Rose_flower.png"
+    alt=""
+>
+
+<img
+    class="corner-flower flower-bottom-left"
+    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Rose_flower.png"
+    alt=""
+>
+
+<img
+    class="corner-flower flower-bottom-right"
+    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Rose_flower.png"
+    alt=""
+>
+
+
+<!-- =========================================================
+     VINES
+========================================================= -->
+
+<div class="vine vine-left"></div>
+
+<div class="vine vine-right"></div>
+
+
+<!-- =========================================================
+     PASSWORD PAGE
+========================================================= -->
+
+<main
+    class="page"
+    id="passwordPage"
+>
+
+<div class="content">
+
+
+<div class="small-title">
+    A little something for you
+</div>
+
+
+<h1>
+    For My Wife
+</h1>
+
+
+<p class="intro">
+
+    A letter from the bottom of my heart
+
+</p>
+
+
+<div class="lock-card">
+
+
+<div class="lock">
+    🔐
+</div>
+
+
+<h2>
+    One Last Step
+</h2>
+
+
+<p class="hint">
+    Enter the code you discovered.
+</p>
+
+
+<input
+    id="password"
+    class="password-input"
+    type="password"
+    placeholder="Enter the password..."
+    autocomplete="off"
+>
+
+
+<button
+    class="unlock-button"
+    onclick="unlockLetter()"
+>
+    Unlock Letter
+</button>
+
+
+<div
+    id="error"
+    class="error"
+>
+   oh maliiiiiiiii.
+    Try again. ♡
+</div>
+
+
+</div>
+
+
+</div>
+
+</main>
+
+
+
+<!-- =========================================================
+     LETTER PAGE
+========================================================= -->
+
+<main
+    class="page"
+    id="letterPage"
+>
+
+
+<div class="letter-scene">
+
+
+<!-- =========================================================
+     PHOTO 1
+========================================================= -->
+
+<img
+    src="pictures1.jpg"
+    class="memory-photo photo1"
+    alt="Memory 1"
+    onerror="this.style.display='none'"
+>
+
+
+<!-- =========================================================
+     PHOTO 2
+========================================================= -->
+
+<img
+    src="pictures2.jpg"
+    class="memory-photo photo2"
+    alt="Memory 2"
+    onerror="this.style.display='none'"
+>
+
+
+<!-- =========================================================
+     PHOTO 3
+========================================================= -->
+
+<img
+    src="pictures3.jpg"
+    class="memory-photo photo3"
+    alt="Memory 3"
+    onerror="this.style.display='none'"
+>
+
+
+<!-- =========================================================
+     PHOTO 4
+========================================================= -->
+
+<img
+    src="pictures4.jpg"
+    class="memory-photo photo4"
+    alt="Memory 4"
+    onerror="this.style.display='none'"
+>
+
+
+<!-- =========================================================
+     PHOTO 5
+========================================================= -->
+
+<img
+    src="pictures5.jpg"
+    class="memory-photo photo5"
+    alt="Memory 5"
+    onerror="this.style.display='none'"
+>
+
+
+<!-- =========================================================
+     PHOTO 6
+========================================================= -->
+
+<img
+    src="pictures6.jpg"
+    class="memory-photo photo6"
+    alt="Memory 6"
+    onerror="this.style.display='none'"
+>
+
+
+<!-- =========================================================
+     PHOTO 7
+========================================================= -->
+
+<img
+    src="pictures7.jpg"
+    class="memory-photo photo7"
+    alt="Memory 7"
+    onerror="this.style.display='none'"
+>
+
+
+<!-- =========================================================
+     PHOTO 8
+========================================================= -->
+
+<img
+    src="pictures8.jpg"
+    class="memory-photo photo8"
+    alt="Memory 8"
+    onerror="this.style.display='none'"
+>
+
+
+<!-- =========================================================
+     PHOTO 9
+========================================================= -->
+
+<img
+    src="pictures9.jpg"
+    class="memory-photo photo9"
+    alt="Memory 9"
+    onerror="this.style.display='none'"
+>
+
+
+<!-- =========================================================
+     PHOTO 10
+========================================================= -->
+
+<img
+    src="pictures10.jpg"
+    class="memory-photo photo10"
+    alt="Memory 10"
+    onerror="this.style.display='none'"
+>
+
+
+<!-- =========================================================
+     PHOTO 11
+========================================================= -->
+
+<img
+    src="pictures11.jpg"
+    class="memory-photo photo11"
+    alt="Memory 11"
+    onerror="this.style.display='none'"
+>
+
+
+<!-- =========================================================
+     PHOTO 12
+========================================================= -->
+
+<img
+    src="pictures12.jpg"
+    class="memory-photo photo12"
+    alt="Memory 12"
+    onerror="this.style.display='none'"
+>
+
+
+<!-- =========================================================
+     PHOTO 13
+========================================================= -->
+
+<img
+    src="pictures13.jpg"
+    class="memory-photo photo13"
+    alt="Memory 13"
+    onerror="this.style.display='none'"
+>
+
+
+<!-- =========================================================
+     PHOTO 14
+========================================================= -->
+
+<img
+    src="pictures14.jpg"
+    class="memory-photo photo14"
+    alt="Memory 14"
+    onerror="this.style.display='none'"
+>
+
+
+<!-- =========================================================
+     PHOTO 15
+========================================================= -->
+
+<img
+    src="pictures15.jpg"
+    class="memory-photo photo15"
+    alt="Memory 15"
+    onerror="this.style.display='none'"
+>
+
+
+<!-- =========================================================
+     LITTLE SCRAPBOOK TEXT
+========================================================= -->
+
+<div class="caption one">
+    little moments ♡
+</div>
+
+
+<div class="caption two">
+    remember this?
+</div>
+
+
+<div class="caption three">
+    always us
+</div>
+
+
+<!-- =========================================================
+     FLOATING HEARTS
+========================================================= -->
+
+<div class="floating-heart heart1">
+    ♡
+</div>
+
+
+<div class="floating-heart heart2">
+    ♡
+</div>
+
+
+<div class="floating-heart heart3">
+    ♡
+</div>
+
+
+<!-- =========================================================
+     LETTER
+========================================================= -->
+
+<div class="letter-paper">
+
+
+<h2 class="letter-heading">
+    To My LoveLove
+</h2>
+
+
+<div class="heart-divider">
+    ♡ · ♡ · ♡
+</div>
+
+
+<div class="letter-text">
+
+Hello lovelove, first i want to say sorry for not giving you the efforts you deserve. I became to kampante and start thinking to
+to my self na ok na siguro yung ganto lang, but i am wrong. Hindi ko dapat inisip na ok lang yon, i forgot my promise na even if
+tayo na, my treatment to you wont change. I know may mali ako and thankyou for telling me. I know im not showing my best rn, and 
+ill do my best to show you the efforts i use to do back then, im not a perfect man i make mistakes and dumb decisions, but i hope
+you still love me despite being like this. I know i hurted you a lot already and made you cry, but i also love you so much,
+it may not seem like it sometimes but i really do. I try my best every single day to make you smile, laugh, enjoy, feel loved and
+more. I know i suck at being a boyfriend, but im trying. I dont have much to offer you physicaly, but when it comes to being there,
+comforting, helping you ill aways be one call away. Also about sa sinabi mo sa mindset ko youre right, i shouldnt think na "kung papasa"
+or "kung papalarin" but instead think na dapat ma achieve ko talaga. I want to grow, to lear, and experience new things with you.
+you told me na i wont be successful with you, but i already told you na ikaw yung reason ko bakit gusto kong yumaman. I want to leave this
+country with you and start a new life somewhere na tahimik and payapa. I know life in college will be hard. Mag oot and mapapagod tayong
+dalawa, but i want us to survive college. You know how hard it is to overthink and so do i. Lets not get tired of each other but instead palakasin
+natin yung relationship natin, yes easier said than done yung mga sinasabi ko, but its not impossible naman. One more thing, gusto lang kita bigyan ng assurance.
+You seem to be jelous of my past, and i understand angeline. Wag mong sarilihin yung pag seselos mo talk to me directly, ill do the same thing.
+If we dont communicate then magkakalabuan talaga tayo. You know how much i love you, more than anyone in the world. For me ikaw yung pinaka magandang girl
+sa mundo. God gave me you, to show me whats real, de jk lang.God gave me you kasi he knows na youre the one meant to be for me, and para sa tanong mo na 
+what if di nag end would i still choose you, who ever said that is dumb, theres no right answer dyan kahit ikaw siguro di mu alam sagot, but onething i can assure 
+you is that ill always choose you no mater what. Any situation na ilalagay tayo ill choose you, and i hope you will to. I love you so much angeline i hope
+di ka nahirapan sa pagisip nung code, i just want to make something na di ko pa nagagawa.
+
+</div>
+
+
+<div class="signature">
+    Forever yours ♡
+</div>
+
+
+</div>
+
+</div>
+
+</main>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+
+/* =========================================================
+   PASSWORD
+========================================================= */
+
+/*
+   CHANGE THIS WORD TO THE FINAL PASSWORD
+   FROM YOUR PHYSICAL PUZZLE.
+*/
+
+const correctPassword = "0462026";
+
+
+/* =========================================================
+   UNLOCK LETTER
+========================================================= */
+
+function unlockLetter() {
+
+    const input =
+        document.getElementById(
+            "password"
+        );
+
+    const passwordPage =
+        document.getElementById(
+            "passwordPage"
+        );
+
+    const letterPage =
+        document.getElementById(
+            "letterPage"
+        );
+
+    const error =
+        document.getElementById(
+            "error"
+        );
+
+
+    const enteredPassword =
+        input.value
+        .trim()
+        .toUpperCase();
+
+
+    /* =========================================
+       CORRECT PASSWORD
+    ========================================= */
+
+    if (
+        enteredPassword ===
+        correctPassword
+    ) {
+
+        error.style.display =
+            "none";
+
+
+        passwordPage.style.opacity =
+            "0";
+
+
+        passwordPage.style.transform =
+            "translateY(-30px)";
+
+
+        setTimeout(
+            function() {
+
+                passwordPage.style.display =
+                    "none";
+
+
+                letterPage.classList.add(
+                    "show-letter"
+                );
+
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
+
+            },
+            700
+        );
+
+    }
+
+
+    /* =========================================
+       WRONG PASSWORD
+    ========================================= */
+
+    else {
+
+        error.style.display =
+            "block";
+
+
+        input.value =
+            "";
+
+
+        input.focus();
+
+
+        passwordPage.classList.remove(
+            "shake"
+        );
+
+
+        void passwordPage.offsetWidth;
+
+
+        passwordPage.classList.add(
+            "shake"
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   ENTER KEY SUPPORT
+========================================================= */
+
+document
+    .getElementById("password")
+    .addEventListener(
+        "keydown",
+        function(event) {
+
+            if (
+                event.key === "Enter"
+            ) {
+
+                unlockLetter();
+
+            }
+
+        }
+    );
+
+
+</script>
+
+
+</body>
+
+</html>
